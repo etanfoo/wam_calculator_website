@@ -14,7 +14,7 @@
     <header class = "navbar-default" role = "banner">
         <div class="container">
             <nav role="navigation">
-                <!-- start bootstrap navigation bar code -->
+                <!-- bootstrap navigation bar -->
                 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
                     <div class="container-fluid">
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -49,16 +49,69 @@
                         </div>
                     </div>
                 </nav>
-                <!-- end bootstrap navigation bar code -->
             </nav>
         </div>
     </header>
-    <div class="input-group mb-3">
-    <div class="input-group-prepend">
-        <span class="input-group-text" id="inputGroup-sizing-default">Subject</span>
-    </div>
-    <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
-    </div>
+    
+    <!-- table -->
+    <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">Subject</th>
+            <th scope="col">Units of Credit</th>
+            <th scope="col">Mark</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>
+                <div class="input-group mb-3">
+                <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                </div>
+            </td>
+            <td>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                </div>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>
+                <div class="input-group mb-3">
+                <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                </div>
+            </td>
+            <td>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                </div>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>
+                <div class="input-group mb-3">
+                <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                </div>
+            </td>
+            <td>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+    <!-- button -->
+    <p>
+        <button type="button" class="btn btn-primary">Calculate WAM</button>
+    </p>
+    
+    
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
 </body>
 </html>
