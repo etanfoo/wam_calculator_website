@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>About this website</title>
+    <link rel = "stylesheet" href = "styles/main.css">
+    <title>How to get your desired WAM</title>
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
@@ -52,6 +53,60 @@
             </nav>
         </div>
     </header>
+
+    <div class="alert alert-success" role="alert">
+        <h4 class="alert-heading">How to get your desired WAM</h4>
+        <p>Enter your current WAM (use the WAM calculator if you don't know it), your desired WAM,
+            how many UOC you have taken, as well as how many UOC are left in your degree. 
+            Press the button to calculate the average mark you will have to achieve per subject to achieve
+            your desired WAM.
+        </p>
+        <hr>
+        <p class="mb-0">Note: WAM has a minimum of 0 and maximum of 100.</p>
+    </div>
+
+    <!-- table -->
+    <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">Current WAM</th>
+            <th scope="col">Desired WAM</th>
+            <th scope="col">Units of Credit taken</th>
+            <th scope="col">Units of Credit left</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+                <div class="input-group mb-3">
+                    <input type="number" min="0" max="100" id = "current_wam" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                </div>
+            </td>
+            <td>
+                <div class="input-group mb-3">
+                    <input type="number" min="0" max="100" id = "desired_wam" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                </div>
+            </td>
+            <td>
+                <div class="input-group mb-3">
+                    <input type="number" min="0" id = "uoc_taken" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                </div>
+            </td>
+            <td>
+                <div class="input-group mb-3">
+                    <input type="number" min="0" id = "uoc_left" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+    <!-- button -->
+    <p>
+        <button type="button" id = "desired" class="btn btn-primary">What marks do I need to achieve?</button>
+    </p>
+
+    <script src="desired.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
 </body>
 </html>
