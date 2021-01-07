@@ -1,21 +1,25 @@
-// var num_one = document.getElementsByTagName("input")[0];
-// var num_two = document.getElementsByTagName("input")[1];
+// rounding function 
+function round(value, decimals) {
+    return Number(Math.round(value+'e'+decimals)+'e-'+decimals);
+}   
 
+var uoc = document.getElementsByName("uoc");
+var mark = document.getElementsByName("mark");
 
-// num_one.addEventListener("input", add);
-// num_two.addEventListener("input", add);
-
-// function add() {
-//     var one = parseFloat(num_one.value) || 0;
-//     var two = parseFloat(num_two.value) || 0;
-
-//     // alert("your sum is:" + (one + two));
-// }
-
-
+// button function to calculate WAM
 var button = document.getElementById("calculate");
 button.onclick = function() {
+    var total_uoc = 0;
+    var total_uoc_mark = 0;
 
-    alert("test");
+    for (i = 0; i < 3; i++) {
+        total_uoc += parseFloat(uoc[i].value);
+        total_uoc_mark += parseFloat(uoc[i].value) * parseFloat(mark[i].value);
+    }
+    
+    var wam = round((total_uoc_mark / total_uoc), 2);
+    alert("Your WAM is:" + wam);
 
 };
+
+
