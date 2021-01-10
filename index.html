@@ -64,7 +64,7 @@
     </div>
 
     <!-- table -->
-    <table class="table table-striped">
+    <table class="table table-striped" id = "input_table">
         <thead>
           <tr>
             <th scope="col">Subject</th>
@@ -72,7 +72,7 @@
             <th scope="col">Mark</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody id = "table_body">
           <tr>
             <th scope="row">1</th>
             <td>
@@ -115,11 +115,18 @@
         </tbody>
       </table>
 
-    <!-- button -->
+    <div class = "add_delete">
+        <!-- add row button -->
+        <button type="button" id = "add_row" class="btn btn-secondary">Add Subject</button>
+        
+        <!-- delete row button -->
+        <button type = "button" id = "delete_row" class = "btn btn-secondary">Remove Subject</button>
+    </div>
+    
+    <!-- calculate wam button -->
     <p>
         <button type="button" id = "calculate" class="btn btn-primary">Calculate WAM</button>
     </p>
-    
     
     <script src="calculate.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>

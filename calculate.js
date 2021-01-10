@@ -51,7 +51,7 @@ button_add_row.onclick = function() {
                 </tr>
                 `;
 
-    table.insertRow(-1);
+    // table.insertRow();
     table.innerHTML += template;
 
     // for (var i = 0; i < 5; i++)
@@ -59,4 +59,14 @@ button_add_row.onclick = function() {
     //     ('#input_table > tbody').append('<tr><td>' + i +'</td><td>b</td><td>c</td>');
     // }
     
+}
+
+// button function to delete row
+var button_delete_row = document.getElementById("delete_row");
+
+button_delete_row.onclick = function() {
+    var table = document.getElementById("input_table");
+    var rowCount = table.rows.length;
+
+    table.deleteRow(rowCount -1);
 }
