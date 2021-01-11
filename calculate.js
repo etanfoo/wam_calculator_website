@@ -28,13 +28,6 @@ var button_add_row = document.getElementById("add_row");
 button_add_row.onclick = function() {
     var table = document.getElementsByTagName('table')[0];
 
-    // var new_row = table.insertRow(0);
-    // var cel1 = new_row.insertCell(0);
-    // var cel2 = new_row.insertCell(1);
-    // var cel3 = new_row.insertCell(2);
-            
-    
-
     let template = `
                 <tr>
                     <th scope="row">${uoc.length + 1}</th>
@@ -51,14 +44,8 @@ button_add_row.onclick = function() {
                 </tr>
                 `;
 
-    // table.insertRow();
     table.innerHTML += template;
 
-    // for (var i = 0; i < 5; i++)
-    // { 
-    //     ('#input_table > tbody').append('<tr><td>' + i +'</td><td>b</td><td>c</td>');
-    // }
-    
 }
 
 // button function to delete row
