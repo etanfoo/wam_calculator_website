@@ -12,6 +12,7 @@
 </head>
 
 <body>
+    
     <header class = "navbar-default" role = "banner">
         <div class="container">
             <nav role="navigation">
@@ -43,9 +44,6 @@
                                 <li><a class="dropdown-item" href="#">Something else here</a></li>
                             </ul>
                             </li>
-                            <li class="nav-item">
-                            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                            </li>
                         </ul>
                         </div>
                     </div>
@@ -53,81 +51,82 @@
             </nav>
         </div>
     </header>
-    
-    <!-- Alert -->
-    <div class="alert alert-success" role="alert">
-        <h4 class="alert-heading">How to use this calculator</h4>
-        <p>Simply enter the units of credit for each subject and its 
-            corresponding mark, press the button to get your WAM!</p>
-        <hr>
-        <p class="mb-0">Note: Marks have a minimum of 0 and maximum of 100.</p>
-    </div>
 
-    <!-- table -->
-    <table class="table table-striped" id = "input_table">
-        <thead>
-          <tr>
-            <th scope="col">Subject</th>
-            <th scope="col">Units of Credit</th>
-            <th scope="col">Mark</th>
-          </tr>
-        </thead>
-        <tbody id = "table_body">
-          <tr>
-            <th scope="row">1</th>
-            <td>
-                <div class="input-group mb-3">
-                    <input type="number" min="0" name = "uoc" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
-                </div>
-            </td>
-            <td>
-                <div class="input-group mb-3">
-                    <input type="number" min="0" max = "100" name = "mark" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
-                </div>
-            </td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>
-                <div class="input-group mb-3">
-                    <input type="number" min="0"  name = "uoc" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
-                </div>
-            </td>
-            <td>
-                <div class="input-group mb-3">
-                    <input type="number" min="0" max = "100" name = "mark" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
-                </div>
-            </td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td>
-                <div class="input-group mb-3">
-                    <input type="number" min="0"  name = "uoc" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
-                </div>
-            </td>
-            <td>
-                <div class="input-group mb-3">
-                    <input type="number" min="0" max = "100" name = "mark" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
-                </div>
-            </td>
-          </tr>
-        </tbody>
-      </table>
+    <div class = "content">
+        <!-- Alert -->
+        <div class="alert alert-success" role="alert">
+            <h4 class="alert-heading">How to use this calculator</h4>
+            <p>Simply enter the units of credit for each subject and its 
+                corresponding mark, press the button to get your WAM!</p>
+            <hr>
+            <p class="mb-0">Note: Marks have a minimum of 0 and maximum of 100.</p>
+        </div>
 
-    <div class = "add_delete">
-        <!-- add row button -->
-        <button type="button" id = "add_row" class="btn btn-secondary">Add Subject</button>
+        <!-- table -->
+        <table class="table table-striped" id = "input_table">
+            <thead>
+            <tr>
+                <th scope="col">Subject</th>
+                <th scope="col">Units of Credit</th>
+                <th scope="col">Mark</th>
+            </tr>
+            </thead>
+            <tbody id = "table_body">
+            <tr>
+                <th scope="row">1</th>
+                <td>
+                    <div class="input-group mb-3">
+                        <input type="number" min="0" name = "uoc" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                    </div>
+                </td>
+                <td>
+                    <div class="input-group mb-3">
+                        <input type="number" min="0" max = "100" name = "mark" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td>
+                    <div class="input-group mb-3">
+                        <input type="number" min="0"  name = "uoc" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                    </div>
+                </td>
+                <td>
+                    <div class="input-group mb-3">
+                        <input type="number" min="0" max = "100" name = "mark" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td>
+                    <div class="input-group mb-3">
+                        <input type="number" min="0"  name = "uoc" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                    </div>
+                </td>
+                <td>
+                    <div class="input-group mb-3">
+                        <input type="number" min="0" max = "100" name = "mark" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+
+        <div class = "add_delete">
+            <!-- add row button -->
+            <button type="button" id = "add_row" class="btn btn-secondary">Add Subject</button>
+            
+            <!-- delete row button -->
+            <button type = "button" id = "delete_row" class = "btn btn-secondary">Remove Subject</button>
+        </div>
         
-        <!-- delete row button -->
-        <button type = "button" id = "delete_row" class = "btn btn-secondary">Remove Subject</button>
+        <!-- calculate wam button -->
+        <p>
+            <button type="button" id = "calculate" class="btn btn-primary">Calculate WAM</button>
+        </p>
     </div>
-    
-    <!-- calculate wam button -->
-    <p>
-        <button type="button" id = "calculate" class="btn btn-primary">Calculate WAM</button>
-    </p>
-    
     <script src="calculate.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
 </body>
