@@ -26,9 +26,7 @@ button_calculate_wam.onclick = function() {
 var button_add_row = document.getElementById("add_row");
 
 button_add_row.onclick = function() {
-    var table = document.getElementsByTagName('table')[0];
-
-    let template = `
+    var template = `
                 <tr>
                     <th scope="row">${uoc.length + 1}</th>
                     <td>
@@ -43,9 +41,13 @@ button_add_row.onclick = function() {
                     </td>
                 </tr>
                 `;
+    
+    var myHtmlContent = template;
 
-    table.innerHTML += template;
+    var tableRef = document.getElementById('input_table').getElementsByTagName('tbody')[0];
 
+    var newRow = tableRef.insertRow(tableRef.rows.length);
+    newRow.innerHTML = myHtmlContent;
 }
 
 // button function to delete row
