@@ -15,6 +15,7 @@ h1 {
     margin-left: 7%;
 }
 
+/* about page banner */
 .about {
     padding: 50px;
     text-align: center;
@@ -24,10 +25,31 @@ h1 {
     font-size: 20px;
 }
 
+/* about page columns */
+.column-left{ 
+    float: left; 
+    width: 33.333%; 
+    font-size: 35px;
+}
+
+.column-right{ 
+    float: right; 
+    width: 33.333%; 
+    font-size: 35px;
+}
+
+.column-center{ 
+    display: inline-block; 
+    width: 33.333%; 
+    font-size: 35px;
+}
+
 .socials {
     text-align: center;
     font-family: Arial;
 }
+
+
 /* lists */
 ol {
     margin: 0 0 1.5em;
@@ -65,7 +87,3 @@ button {
 table td {
     border-top: none;
 }
-
-/* .table th, .table td { 
-    border-top: none !important; 
-} */
