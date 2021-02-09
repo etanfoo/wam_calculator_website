@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel = "stylesheet" href = "styles/main.css">
+    <title>GPA calculator</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+</head>
+<body>
+    <header class = "navbar-default" role = "banner">
+        <div class="container">
+            <nav role="navigation">
+                <!-- bootstrap navigation bar -->
+                <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                    <div class="container-fluid">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="index.html">WAM calculator</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="gpa_calculator.html">GPA calculator</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="desired_wam.html">How to get your desired WAM</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="about.html">About</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Socials
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="https://www.linkedin.com/in/etan-foo-aa06641aa/">LinkedIn</a></li>
+                                <li><a class="dropdown-item" href="https://github.com/etanfoo">GitHub</a></li>
+                            </ul>
+                            </li>
+                        </ul>
+                        </div>
+                    </div>
+                </nav>
+            </nav>
+        </div>
+    </header>
+
+    <div class = "content">
+        <!-- Alert -->
+        <div class="alert alert-success" role="alert">
+            <h4 class="alert-heading">How to use this calculator</h4>
+            <p>GPA is a different grading system from WAM, and is usually calculated on 4.0 or 7.0 scale. 
+            </p>
+            <hr>
+            <p class="mb-0">The following table will demonstrate the value of each grade on both scales:</p>
+            
+        </div>
+        
+        <!-- Table to show values of grades-->
+        <table class="table table-warning">
+            <thead>
+              <tr>
+                <th scope="col">Grade</th>
+                <th scope="col"></th>
+                <th scope="col">Value (4.0)</th>
+                <th scope="col">Value (7.0)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>HD</th>
+                <td>High Distinction</td>
+                <td>4.0</td>
+                <td>7.0</td>
+              </tr>
+              <tr>
+                <th>D</th>
+                <td>Distinction</td>
+                <td>3.0</td>
+                <td>6.0</td>
+              </tr>
+              <tr>
+                <th>Cr</th>
+                <td>Credit</td>
+                <td>2.0</td>
+                <td>5.0</td>
+              </tr>
+              <tr>
+                <th>P</th>
+                <td>Pass</td>
+                <td>1.0</td>
+                <td>4.0</td>
+              </tr>
+              <tr>
+                <th>F</th>
+                <td>Fail</td>
+                <td>0</td>
+                <td>0</td>
+              </tr>
+            </tbody>
+          </table>
+
+
+        <!-- Table to calculate GPA -->
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th scope="col">Grade</th>
+                <th scope="col">Number of units</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>High Distinction</td>
+                <td>
+                    <div class="input-group mb-3">
+                        <input type="number" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>Distinction</td>
+                <td>
+                    <div class="input-group mb-3">
+                        <input type="number" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>Credit</td>
+                <td>
+                    <div class="input-group mb-3">
+                        <input type="number" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>Pass</td>
+                <td>
+                    <div class="input-group mb-3">
+                        <input type="number" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>Fail</td>
+                <td>
+                    <div class="input-group mb-3">
+                        <input type="number" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    
+
+    <script src="gpa.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+</body>
+</html>
